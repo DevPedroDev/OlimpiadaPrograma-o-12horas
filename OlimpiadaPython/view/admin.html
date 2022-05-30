@@ -1,0 +1,58 @@
+<html>
+   <head lang="pt-br">
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>Rapid Blue Transports</title>
+      <meta name="description" content="">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/js/bootstrap.min.js" integrity="sha512-Hqe3s+yLpqaBbXM6VA0cnj/T56ii5YjNrMT9v+us11Q81L0wzUG0jEMNECtugqNu2Uq5MSttCg0p4KK0kCPVaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <link rel="stylesheet" href="css/estilo.css">
+   </head>
+   <body>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>RAPID BLUE</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+      <div class="fixed-top">
+         <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span> </button>
+            <font class="navbar-brand" face="Courier New" style="padding: 20px 20px;"> Rapid Blue Transports </font>
+            <a class="navbar-brand" href="index.html" onclick="sobre();return false;">ADMIN</a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            </div>
+         </nav>
+      </div>
+
+<div class="container"style="padding-top: 200px;">
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Valor Fixo</th>
+      <th scope="col">Região</th>
+      <th scope="col">Valor Unidade</th>
+      <th scope="col">Valor KM</th>
+      <th scope="col">Total</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Deletar</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for compania in companias %}
+      <tr>
+        <td>{{ compania[1] }}</td>
+        <td>{{ compania[2] }}</td>
+        <td>{{ compania[3] }}</td>
+        <td>{{ compania[4] }}</td>
+        <td>{{ compania[5] }}</td>
+        <td><button class="btn btn-primary" onclick="window.open('/editar/{{ compania[0] }}')">Editar</button></td>
+        <td><button class="btn btn-danger" onclick="window.open('/deletar/{{ compania[0] }}')">Delete</button></td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+  </tbody>
+</table>
+</div>

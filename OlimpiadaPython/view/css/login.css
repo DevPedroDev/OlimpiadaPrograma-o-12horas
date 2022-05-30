@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  background-color: #F3F1FE !important;
+}
+
+.container {
+  max-width: 350px;
+  min-height: 500;
+  margin: 80px auto;
+  padding: 40px 30px 30px 30px;
+  background: #ccc;
+  border-radius: 15px;
+  box-shadow: 13px 13px 20px #ccc, -13px -13px -20px #fff;
+  background-color:#9FC7F5;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+
+
+.text-center i {
+  font-size: 20px;
+}
+
+
+#form-princ{
+   margin: 0 auto;
+   width: 30%;
+
+}
